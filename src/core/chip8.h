@@ -8,7 +8,7 @@
 class Chip8 {
 public:
   // Constants
-  static constexpr std::size_t MEMORY_SIZE = 4096; // 4K memory
+  static constexpr std::size_t MEMORY_SIZE = 4096;              // 4K memory
   static constexpr std::uint16_t PROGRAM_START_ADDRESS = 0x200; // Programs start at 0x200
   static constexpr std::uint16_t FONTSET_START_ADDRESS = 0x50;  // Fontset starts at 0x50
   static constexpr std::size_t DISPLAY_WIDTH = 64;

@@ -29,7 +29,6 @@ void Chip8::tick_timers() {
   // TODO: decrement delay timer and sound timer if they are greater than zero
 }
 
-void Chip8::set_key([[maybe_unused]] std::uint8_t key,[[maybe_unused]] bool pressed) {
+void Chip8::set_key([[maybe_unused]] std::uint8_t key, [[maybe_unused]] bool pressed) {
   // TODO: Implement key press/release logic (0x0 to 0xF)
 }
-
