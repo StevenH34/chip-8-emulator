@@ -43,7 +43,8 @@ add_executable(chip8 src/app/main.cpp
         src/core/chip8.cpp
         src/core/chip8.h
         src/app/display.cpp
-        src/app/display.h)
+        src/app/display.h
+        src/app/input.h)
 target_link_libraries(chip8 PRIVATE chip8_warnings SDL3::SDL3)
 
 # --- Tests --------------------------------------------------------------------
