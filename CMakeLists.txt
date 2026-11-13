@@ -39,7 +39,9 @@ FetchContent_Declare(SDL3
 FetchContent_MakeAvailable(SDL3)
 
 # --- App ----------------------------------------------------------------------
-add_executable(chip8 src/app/main.cpp)
+add_executable(chip8 src/app/main.cpp
+        src/core/chip8.cpp
+        src/core/chip8.h)
 target_link_libraries(chip8 PRIVATE chip8_warnings SDL3::SDL3)
 
 # --- Tests --------------------------------------------------------------------
