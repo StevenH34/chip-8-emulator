@@ -22,11 +22,27 @@ If you change compilers or see a "compiler changed" error, reconfigure from scra
 
 ## Running
 
+Pass the path to a ROM file as the first argument:
+
 ```bash
-./build/debug/chip8.exe
+./build/debug/chip8.exe roms/1-chip8-logo.ch8
 ```
 
-This opens the emulator window. Close it to exit. The C++ runtime is linked statically, so the executable runs without any extra DLLs.
+This opens the emulator window. Close it to exit. Relative paths are resolved from the directory you run the command in. The C++ runtime is linked statically, so the executable runs without any extra DLLs.
+
+`roms/` contains `1-chip8-logo.ch8`, the CHIP-8 splash screen from [Timendus' chip8-test-suite](https://github.com/Timendus/chip8-test-suite). It is a quick check that the emulator boots and draws.
+
+### Controls
+
+The CHIP-8 keypad is mapped to the left side of the keyboard:
+
+```
+Keypad      Keyboard
+1 2 3 C     1 2 3 4
+4 5 6 D     Q W E R
+7 8 9 E     A S D F
+A 0 B F     Z X C V
+```
 
 ## Testing
 
@@ -41,7 +57,7 @@ Tests use [Catch2](https://github.com/catchorg/Catch2) and live in `tests/`.
 1. Open the project folder. CLion detects `CMakePresets.json`.
 2. In **Settings → Build, Execution, Deployment → Toolchains**, add a toolchain that uses the llvm-mingw `bin` folder.
 3. In **Settings → Build, Execution, Deployment → CMake**, enable the `Debug` and `Release` preset profiles and disable the default `Debug` profile.
-4. Choose the `chip8` run configuration to launch the emulator, or `chip8_tests` to run the tests.
+4. Choose the `chip8` run configuration to launch the emulator, or `chip8_tests` to run the tests. Under **Run → Edit Configurations → chip8**, set **Program arguments** to the ROM path. Use an absolute path, because CLion runs the program from the build directory.
 
 ## Learning References
 
