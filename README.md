@@ -58,3 +58,12 @@ Tests use [Catch2](https://github.com/catchorg/Catch2) and live in `tests/`.
 2. In **Settings → Build, Execution, Deployment → Toolchains**, add a toolchain that uses the llvm-mingw `bin` folder.
 3. In **Settings → Build, Execution, Deployment → CMake**, enable the `Debug` and `Release` preset profiles and disable the default `Debug` profile.
 4. Choose the `chip8` run configuration to launch the emulator, or `chip8_tests` to run the tests. Under **Run → Edit Configurations → chip8**, set **Program arguments** to the ROM path. Use an absolute path, because CLion runs the program from the build directory.
+
+## Learning References
+
+- [Tobias Langhoff's guide](https://tobiasvl.github.io/blog/write-a-chip-8-emulator/): high-level walkthrough
+- [Cowgod's technical reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
+- [Chip-8 Design Specification](https://www.cs.columbia.edu/~sedwards/classes/2016/4840-spring/designs/Chip8.pdf)
+- [An Introduction to Chip-8 Emulation using the Rust Programming Language](https://github.com/aquova/chip8-book)
+- [Building a CHIP-8 Emulator C++](https://austinmorlan.com/posts/chip8_emulator/)
+- [CHIP-8 Variant Opcode Table](https://chip8.gulrak.net)
