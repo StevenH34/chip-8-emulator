@@ -10,5 +10,7 @@ bool Audio::init() {
 }
 
 void Audio::set_active([[maybe_unused]] bool on) {
+  // No audio device: run silently.
+  if (!audio_stream_) return;
   // Activate or deactivate the audio system here
 }
